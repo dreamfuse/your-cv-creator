@@ -51,7 +51,9 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm">Download CV</Button>
+            <Button size="sm" asChild>
+              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>Download CV</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,7 +87,9 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="w-full">Download CV</Button>
+            <Button size="sm" className="w-full" asChild>
+              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>Download CV</a>
+            </Button>
           </div>
         </motion.div>
       )}

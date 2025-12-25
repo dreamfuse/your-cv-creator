@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Linkedin, Mail, Github } from "lucide-react";
+import { ArrowDown, Linkedin, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -27,7 +27,7 @@ const Hero = () => {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 text-sm font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
-              Automation & Engineering Professional
+              Automation & Robotics Engineering Student
             </span>
           </motion.div>
 
@@ -37,9 +37,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-7xl font-bold font-heading mb-6 tracking-tight"
           >
-            <span className="text-foreground">Chinemerem</span>
+            <span className="text-foreground">Ogbonnah</span>
             <br />
-            <span className="text-gradient">Ogbonnah</span>
+            <span className="text-gradient">Chinemerem</span>
           </motion.h1>
 
           <motion.p
@@ -48,8 +48,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Passionate about designing and implementing cutting-edge automation solutions 
-            that drive efficiency and innovation in engineering systems.
+            Third-year Automation student proficient in TIA Portal and Beckhoff TwinCAT. 
+            Passionate about taking innovative and creative approaches to solve technical challenges.
           </motion.p>
 
           <motion.div
@@ -58,17 +58,23 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <Button size="lg" className="gap-2">
-              <Mail className="w-4 h-4" />
-              Get In Touch
+            <Button size="lg" className="gap-2" asChild>
+              <a href="mailto:chinemeremogbonnah2@gmail.com">
+                <Mail className="w-4 h-4" />
+                Get In Touch
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <Linkedin className="w-4 h-4" />
-              LinkedIn
+            <Button size="lg" variant="outline" className="gap-2" asChild>
+              <a href="https://linkedin.com/in/meremo" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
             </Button>
-            <Button size="lg" variant="ghost" className="gap-2">
-              <Github className="w-4 h-4" />
-              GitHub
+            <Button size="lg" variant="ghost" className="gap-2" asChild>
+              <a href="https://dreamfuse.github.io/cv" target="_blank" rel="noopener noreferrer">
+                <Globe className="w-4 h-4" />
+                Web CV
+              </a>
             </Button>
           </motion.div>
         </motion.div>

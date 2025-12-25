@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Linkedin, MapPin, Phone, Send, Github } from "lucide-react";
+import { Mail, Linkedin, MapPin, Phone, Send, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -27,10 +27,16 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "contact@example.com", href: "mailto:contact@example.com" },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/cogbonnah", href: "#" },
-    { icon: Github, label: "GitHub", value: "github.com/cogbonnah", href: "#" },
-    { icon: MapPin, label: "Location", value: "Available Worldwide", href: null },
+    { icon: Mail, label: "Email", value: "chinemeremogbonnah2@gmail.com", href: "mailto:chinemeremogbonnah2@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+358 46 543 3500", href: "tel:+358465433500" },
+    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/meremo", href: "https://linkedin.com/in/meremo" },
+    { icon: Globe, label: "Web CV", value: "dreamfuse.github.io/cv", href: "https://dreamfuse.github.io/cv" },
+    { icon: MapPin, label: "Location", value: "Jyväskylä, Finland", href: null },
+  ];
+
+  const references = [
+    { name: "Anna Tenhunen", role: "Talent Boost Coordinator", phone: "+358 50 411 2215" },
+    { name: "Victor Solovev", role: "UMT Victor", phone: "+358 41 317 8791" },
   ];
 
   return (
@@ -46,26 +52,28 @@ const Contact = () => {
               Get In Touch
             </span>
             <h2 className="section-heading mt-4">
-              Let's Work Together
+              Let's Connect
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Have a project in mind or want to discuss opportunities? 
-              I'm always open to new challenges and collaborations.
+              Interested in automation projects or collaboration opportunities? 
+              Feel free to reach out!
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
+              className="space-y-4"
             >
               {contactInfo.map((item, index) => (
                 <motion.a
                   key={item.label}
                   href={item.href || "#"}
+                  target={item.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
@@ -80,6 +88,25 @@ const Contact = () => {
                   </div>
                 </motion.a>
               ))}
+
+              {/* References */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="mt-8 pt-6 border-t border-border"
+              >
+                <h3 className="font-heading font-semibold mb-4">References</h3>
+                <div className="space-y-3">
+                  {references.map((ref) => (
+                    <div key={ref.name} className="p-3 bg-muted/50 rounded-lg">
+                      <p className="font-medium">{ref.name}</p>
+                      <p className="text-sm text-muted-foreground">{ref.role}</p>
+                      <p className="text-sm text-primary">{ref.phone}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Contact Form */}
