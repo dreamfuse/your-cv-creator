@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, GraduationCap } from "lucide-react";
 
 const Experience = () => {
   const ref = useRef(null);
@@ -9,25 +9,47 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: "Senior Automation Engineer",
-      company: "Industrial Solutions Corp",
-      period: "2022 - Present",
-      description: "Leading automation projects for manufacturing facilities, implementing PLC-based control systems and SCADA solutions.",
-      highlights: ["Team leadership", "System architecture", "Client consulting"],
+      title: "Talent Boost Intern",
+      company: "JAMK University of Applied Sciences",
+      period: "Aug 2025 - Dec 2025",
+      description: "Internship program focused on professional development and industry exposure in automation and robotics.",
+      highlights: ["Professional Development", "Industry Exposure", "Technical Training"],
     },
     {
-      title: "Control Systems Engineer",
-      company: "TechFlow Engineering",
-      period: "2020 - 2022",
-      description: "Developed and maintained industrial control systems, focusing on process optimization and safety compliance.",
-      highlights: ["PLC programming", "HMI development", "System integration"],
+      title: "Marketing Intern",
+      company: "UMT Victor",
+      period: "Nov 2024 - Mar 2025",
+      description: "Contributed to marketing initiatives and gained experience in business operations.",
+      highlights: ["Marketing", "Business Operations", "Communication"],
     },
     {
-      title: "Automation Technician",
-      company: "ProAutomate Industries",
-      period: "2018 - 2020",
-      description: "Installed, configured, and troubleshot automation equipment across multiple industrial sectors.",
-      highlights: ["Field installation", "Troubleshooting", "Documentation"],
+      title: "Viitasaari Hackathon",
+      company: "Participant",
+      period: "March & Sept 2025",
+      description: "Participated in hackathon events, collaborating on innovative solutions and technical challenges.",
+      highlights: ["Innovation", "Team Collaboration", "Problem Solving"],
+    },
+    {
+      title: "Media Club & Teaching Assistant",
+      company: "Deeper Life High School",
+      period: "2019 - 2022",
+      description: "Active member of the Media Club and served as a Teaching Assistant, developing communication and leadership skills.",
+      highlights: ["Leadership", "Teaching", "Media Production"],
+    },
+  ];
+
+  const education = [
+    {
+      degree: "Bachelor's in Automation and Robotics",
+      school: "JAMK University of Applied Sciences",
+      period: "2023 - 2027",
+      location: "Jyväskylä, Finland",
+    },
+    {
+      degree: "High School Diploma",
+      school: "Deeper Life High School",
+      period: "2016 - 2022",
+      location: "Nigeria",
     },
   ];
 
@@ -39,12 +61,52 @@ const Experience = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-center mb-16">
+          {/* Education Section */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <div className="text-center mb-12">
+              <span className="text-primary text-sm font-medium tracking-widest uppercase">
+                Academic Background
+              </span>
+              <h2 className="section-heading mt-4">
+                Education
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {education.map((edu, index) => (
+                <motion.div
+                  key={edu.degree}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  className="glass-card p-6 rounded-xl hover:border-primary/30 transition-colors"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/10 rounded-lg">
+                      <GraduationCap className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-lg">{edu.degree}</h3>
+                      <p className="text-primary font-medium mt-1">{edu.school}</p>
+                      <div className="flex items-center gap-2 text-muted-foreground text-sm mt-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{edu.period}</span>
+                      </div>
+                      <p className="text-muted-foreground text-sm mt-1">{edu.location}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Experience Section */}
+          <div className="text-center mb-12">
             <span className="text-primary text-sm font-medium tracking-widest uppercase">
               Career Journey
             </span>
             <h2 className="section-heading mt-4">
-              Work Experience
+              Experience
             </h2>
           </div>
 
@@ -57,7 +119,7 @@ const Experience = () => {
                 key={exp.title}
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
                 className={`relative mb-12 last:mb-0 ${
                   index % 2 === 0 ? "md:pr-1/2" : "md:pl-1/2 md:ml-auto"
                 }`}

@@ -1,17 +1,19 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, Target, Lightbulb, Users } from "lucide-react";
+import { Users, Lightbulb, Clock, MessageSquare, Sparkles, Eye, Briefcase } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const traits = [
-    { icon: Zap, title: "Innovative", description: "Creative problem-solving approach" },
-    { icon: Target, title: "Precision", description: "Meticulous attention to detail" },
-    { icon: Lightbulb, title: "Adaptive", description: "Quick to learn new technologies" },
-    { icon: Users, title: "Collaborative", description: "Strong team player" },
+    { icon: Users, title: "Teamwork", description: "Strong collaborator" },
+    { icon: Lightbulb, title: "Problem Solving", description: "Analytical thinker" },
+    { icon: Clock, title: "Time Management", description: "Efficient & organized" },
+    { icon: MessageSquare, title: "Communication", description: "Clear & effective" },
+    { icon: Sparkles, title: "Creative Thinking", description: "Innovative approaches" },
+    { icon: Eye, title: "Attention to Detail", description: "Precision focused" },
   ];
 
   return (
@@ -28,11 +30,11 @@ const About = () => {
               About Me
             </span>
             <h2 className="section-heading mt-4">
-              Engineering Excellence
+              My Profile
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left side - Text */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -40,21 +42,40 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-6"
             >
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                As an Automation and Engineering professional, I specialize in developing 
-                sophisticated control systems and automation solutions that transform 
-                industrial processes.
-              </p>
+              <div className="glass-card p-6 rounded-xl">
+                <p className="text-lg text-foreground leading-relaxed">
+                  Third-year Automation student proficient in <span className="text-primary font-medium">TIA Portal</span> and 
+                  currently learning the <span className="text-primary font-medium">Beckhoff TwinCAT</span> environment.
+                </p>
+              </div>
               <p className="text-muted-foreground leading-relaxed">
-                My expertise spans PLC programming, SCADA systems, industrial networking, 
-                and process optimization. I'm driven by the challenge of making complex 
-                systems work seamlessly together.
+                Strong problem solver and team player, with experience working on mini-projects 
+                involving multiple communication protocols. Passionate about taking innovative 
+                and creative approaches to solve technical challenges.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                With a foundation in both theoretical knowledge and hands-on experience, 
-                I bring a comprehensive approach to every project, ensuring solutions are 
-                not only innovative but also practical and maintainable.
-              </p>
+              
+              {/* Location & Contact Info */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full">
+                  <span className="text-sm text-muted-foreground">📍 Jyväskylä, Finland</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-muted rounded-full">
+                  <span className="text-sm text-muted-foreground">📞 +358 46 543 3500</span>
+                </div>
+              </div>
+
+              {/* Languages */}
+              <div className="pt-4">
+                <h4 className="font-heading font-semibold mb-3">Languages</h4>
+                <div className="flex gap-3">
+                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium">
+                    English — Fluent
+                  </span>
+                  <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg text-sm font-medium">
+                    Finnish — Basic-Intermediate
+                  </span>
+                </div>
+              </div>
             </motion.div>
 
             {/* Right side - Traits */}
@@ -70,11 +91,11 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="glass-card p-6 rounded-xl group hover:border-primary/50 transition-colors"
+                  className="glass-card p-5 rounded-xl group hover:border-primary/50 transition-colors"
                 >
-                  <trait.icon className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-heading font-semibold mb-1">{trait.title}</h3>
-                  <p className="text-sm text-muted-foreground">{trait.description}</p>
+                  <trait.icon className="w-7 h-7 text-primary mb-3 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-heading font-semibold mb-1 text-sm">{trait.title}</h3>
+                  <p className="text-xs text-muted-foreground">{trait.description}</p>
                 </motion.div>
               ))}
             </motion.div>
