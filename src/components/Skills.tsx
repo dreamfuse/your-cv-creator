@@ -50,6 +50,13 @@ const Skills = () => {
       skills: ["Risk Analysis", "Safety Planning", "Safety Design", "Documentation", "I/O Lists"],
       color: "from-indigo-500 to-blue-500",
     },
+    {
+      icon: Cpu,
+      title: "Robotics",
+      description: "Robot systems and analysis",
+      skills: ["Visual Components", "HAZOP Analysis", "Risk Assessment"],
+      color: "from-sky-500 to-cyan-500",
+    },
   ];
 
   const currentlyLearning = [
