@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Mail, Linkedin, MapPin, Phone, Send, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,8 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -40,115 +36,87 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative" ref={ref}>
+    <section id="contact" className="py-24 relative">
       <div className="container px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="text-center mb-16">
-            <span className="text-primary text-sm font-medium tracking-widest uppercase">
-              Get In Touch
-            </span>
-            <h2 className="section-heading mt-4">
-              Let's Connect
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Interested in automation projects or collaboration opportunities? 
-              Feel free to reach out!
-            </p>
-          </div>
+        <div className="text-center mb-16">
+          <span className="text-primary text-sm font-medium tracking-widest uppercase">
+            Get In Touch
+          </span>
+          <h2 className="section-heading mt-4">Let's Connect</h2>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            Interested in automation projects or collaboration opportunities? Feel free to reach out!
+          </p>
+        </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-4"
-            >
-              {contactInfo.map((item, index) => (
-                <motion.a
-                  key={item.label}
-                  href={item.href || "#"}
-                  target={item.href?.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href?.startsWith("http") ? "noopener noreferrer" : undefined}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-4 p-4 glass-card rounded-xl hover:border-primary/50 transition-colors group cursor-pointer"
-                >
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <item.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">{item.label}</p>
-                    <p className="font-medium group-hover:text-primary transition-colors">{item.value}</p>
-                  </div>
-                </motion.a>
-              ))}
-
-              {/* References */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="mt-8 pt-6 border-t border-border"
+        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {/* Contact Info */}
+          <div className="space-y-4">
+            {contactInfo.map((item) => (
+              <a
+                key={item.label}
+                href={item.href || "#"}
+                target={item.href?.startsWith("http") ? "_blank" : undefined}
+                rel={item.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="flex items-center gap-4 p-4 glass-card rounded-xl hover:border-primary/50 transition-colors group cursor-pointer"
               >
-                <h3 className="font-heading font-semibold mb-4">References</h3>
-                <div className="space-y-3">
-                  {references.map((ref) => (
-                    <div key={ref.name} className="p-3 bg-muted/50 rounded-lg">
-                      <p className="font-medium">{ref.name}</p>
-                      <p className="text-sm text-muted-foreground">{ref.role}</p>
-                      <p className="text-sm text-primary">{ref.phone}</p>
-                    </div>
-                  ))}
+                <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-5 h-5 text-primary" />
                 </div>
-              </motion.div>
-            </motion.div>
+                <div>
+                  <p className="text-sm text-muted-foreground">{item.label}</p>
+                  <p className="font-medium group-hover:text-primary transition-colors">{item.value}</p>
+                </div>
+              </a>
+            ))}
 
-            {/* Contact Form */}
-            <motion.form
-              initial={{ opacity: 0, x: 40 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              onSubmit={handleSubmit}
-              className="space-y-4"
-            >
-              <div className="grid gap-4">
-                <Input
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  className="bg-card border-border focus:border-primary"
-                />
-                <Input
-                  type="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  className="bg-card border-border focus:border-primary"
-                />
-                <Textarea
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                  rows={6}
-                  className="bg-card border-border focus:border-primary resize-none"
-                />
+            {/* References */}
+            <div className="mt-8 pt-6 border-t border-border">
+              <h3 className="font-heading font-semibold mb-4">References</h3>
+              <div className="space-y-3">
+                {references.map((ref) => (
+                  <div key={ref.name} className="p-3 bg-muted/50 rounded-lg">
+                    <p className="font-medium">{ref.name}</p>
+                    <p className="text-sm text-muted-foreground">{ref.role}</p>
+                    <p className="text-sm text-primary">{ref.phone}</p>
+                  </div>
+                ))}
               </div>
-              <Button type="submit" size="lg" className="w-full gap-2">
-                <Send className="w-4 h-4" />
-                Send Message
-              </Button>
-            </motion.form>
+            </div>
           </div>
-        </motion.div>
+
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid gap-4">
+              <Input
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                required
+                className="bg-card border-border focus:border-primary"
+              />
+              <Input
+                type="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
+                className="bg-card border-border focus:border-primary"
+              />
+              <Textarea
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                required
+                rows={6}
+                className="bg-card border-border focus:border-primary resize-none"
+              />
+            </div>
+            <Button type="submit" size="lg" className="w-full gap-2">
+              <Send className="w-4 h-4" />
+              Send Message
+            </Button>
+          </form>
+        </div>
       </div>
     </section>
   );

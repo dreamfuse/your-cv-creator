@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,55 +8,30 @@ const Hero = () => {
       <div className="absolute inset-0 grid-pattern opacity-50" />
       
       {/* Floating accent orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
       {/* Content */}
       <div className="container relative z-10 px-6 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6"
-          >
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-6">
             <span className="inline-block px-4 py-2 text-sm font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
               Automation & Robotics Engineering Student
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold font-heading mb-6 tracking-tight"
-          >
+          <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6 tracking-tight">
             <span className="text-foreground">Ogbonnah</span>
             <br />
             <span className="text-gradient">Chinemerem</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
             Third-year Automation student proficient in TIA Portal and Beckhoff TwinCAT. 
             Passionate about taking innovative and creative approaches to solve technical challenges.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-wrap items-center justify-center gap-4"
-          >
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <Button size="lg" className="gap-2" asChild>
               <a href="mailto:chinemeremogbonnah2@gmail.com">
                 <Mail className="w-4 h-4" />
@@ -76,25 +50,16 @@ const Hero = () => {
                 Web CV
               </a>
             </Button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2 text-muted-foreground"
-          >
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="flex flex-col items-center gap-2 text-muted-foreground">
             <span className="text-sm font-medium">Scroll to explore</span>
             <ArrowDown className="w-4 h-4" />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
