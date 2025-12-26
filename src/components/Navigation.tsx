@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,10 +24,7 @@ const Navigation = () => {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
       }`}
@@ -53,7 +49,9 @@ const Navigation = () => {
               </a>
             ))}
             <Button size="sm" asChild>
-              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>Download CV</a>
+              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>
+                Download CV
+              </a>
             </Button>
           </div>
 
@@ -71,12 +69,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border"
-        >
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border">
           <div className="container px-6 py-4 space-y-4">
             {navLinks.map((link) => (
               <a
@@ -89,12 +82,14 @@ const Navigation = () => {
               </a>
             ))}
             <Button size="sm" className="w-full" asChild>
-              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>Download CV</a>
+              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>
+                Download CV
+              </a>
             </Button>
           </div>
-        </motion.div>
+        </div>
       )}
-    </motion.nav>
+    </nav>
   );
 };
 
