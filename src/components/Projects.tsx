@@ -1,4 +1,4 @@
-import { Cpu, Gauge, Network, Code, Wrench, Zap, Box, Bot } from "lucide-react";
+import { Cpu, Gauge, Network, Code, Wrench, Zap, Box, Bot, Play } from "lucide-react";
 
 const Projects = () => {
   const academicProjects = [
@@ -52,6 +52,7 @@ const Projects = () => {
       title: "Warehouse Simulation",
       description: "Planned and modelled a simulated warehouse in Visual Components, programming two robots to carry out palletizing and pick-and-place operations while integrating safety systems and devices, and defining storage, sorting and transport zones using process nodes.",
       tech: ["Visual Components", "Robot Programming", "Safety Systems"],
+      videoUrl: "https://drive.google.com/file/d/1b9Fry2TKlif9_uUJOV0OHs8p5kfmU9VT/view?usp=sharing",
     },
     {
       icon: Bot,
@@ -136,8 +137,21 @@ const Projects = () => {
                 key={project.title}
                 className="glass-card p-5 rounded-xl group hover:border-primary/50 transition-all duration-300"
               >
-                <div className="p-2.5 bg-primary/10 rounded-lg w-fit mb-3 group-hover:bg-primary/20 transition-colors">
-                  <project.icon className="w-5 h-5 text-primary" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="p-2.5 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/20 transition-colors">
+                    <project.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  {project.videoUrl && (
+                    <a
+                      href={project.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <Play className="w-4 h-4" />
+                      Watch Video
+                    </a>
+                  )}
                 </div>
                 <h4 className="font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
                   {project.title}
