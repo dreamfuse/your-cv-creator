@@ -146,9 +146,9 @@ const Projects = () => {
                       href={project.videoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors"
+                      className="flex items-center gap-1.5 text-xs font-medium bg-primary text-primary-foreground px-3 py-1.5 rounded-full hover:bg-primary/90 transition-colors shadow-sm"
                     >
-                      <Play className="w-4 h-4" />
+                      <Play className="w-3.5 h-3.5 fill-current" />
                       Watch Video
                     </a>
                   )}
