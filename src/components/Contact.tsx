@@ -23,7 +23,7 @@ const Contact = () => {
     { icon: Mail, label: "Email", value: "chinemeremogbonnah2@gmail.com", href: "mailto:chinemeremogbonnah2@gmail.com" },
     { icon: Phone, label: "Phone", value: "+358 46 543 3500", href: "tel:+358465433500" },
     { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/meremo", href: "https://linkedin.com/in/meremo" },
-    { icon: Globe, label: "Web CV", value: "dreamfuse.github.io/cv", href: "https://dreamfuse.github.io/cv" },
+    { icon: Globe, label: "Web CV", value: "merem.lovable.app", href: "https://merem.lovable.app" },
     { icon: MapPin, label: "Location", value: "Jyväskylä, Finland", href: null },
   ];
 
