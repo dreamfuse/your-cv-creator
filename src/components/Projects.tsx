@@ -1,4 +1,4 @@
-import { Cpu, Gauge, Network, Code, Wrench, Zap } from "lucide-react";
+import { Cpu, Gauge, Network, Code, Wrench, Zap, Box, Bot } from "lucide-react";
 
 const Projects = () => {
   const academicProjects = [
@@ -43,6 +43,27 @@ const Projects = () => {
       description:
         "Prepared device lists for a process, including field device planning and documentation, I/O lists, wiring diagrams, and circuit diagrams.",
       tech: ["Documentation", "I/O Lists", "AutoCAD"],
+    },
+  ];
+
+  const visualComponentsProjects = [
+    {
+      icon: Box,
+      title: "Warehouse Simulation",
+      description: "Planned and modelled a simulated warehouse in Visual Components, programming two robots to carry out palletizing and pick-and-place operations while integrating safety systems and devices, and defining storage, sorting and transport zones using process nodes.",
+      tech: ["Visual Components", "Robot Programming", "Safety Systems"],
+    },
+    {
+      icon: Bot,
+      title: "MIR Robot Programming",
+      description: "Programmed a MIR robot to map out a laboratory environment, assigned safety and operational zones, localized charging zones and carried out basic navigation missions.",
+      tech: ["MIR Robot", "Navigation", "Zone Mapping"],
+    },
+    {
+      icon: Bot,
+      title: "Universal Robot Vision Integration",
+      description: "Programmed a Universal Robot, utilizing camera-based vision feedback to orient the robot and pre-configured positions to place a workpiece onto a designated board.",
+      tech: ["Universal Robots", "Vision Feedback", "Pick & Place"],
     },
   ];
 
@@ -101,6 +122,37 @@ const Projects = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Visual Components / Robot Programming */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-heading font-semibold">Visual Components & Robot Programming</h3>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {visualComponentsProjects.map((project) => (
+              <div
+                key={project.title}
+                className="glass-card p-5 rounded-xl group hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="p-2.5 bg-primary/10 rounded-lg w-fit mb-3 group-hover:bg-primary/20 transition-colors">
+                  <project.icon className="w-5 h-5 text-primary" />
+                </div>
+                <h4 className="font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h4>
+                <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tech.map((tech) => (
+                    <span key={tech} className="px-2 py-0.5 text-xs bg-primary/10 text-primary rounded">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Personal Projects */}

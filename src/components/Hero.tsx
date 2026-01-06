@@ -1,4 +1,4 @@
-import { ArrowDown, Linkedin, Mail, Globe } from "lucide-react";
+import { ArrowDown, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -42,12 +42,6 @@ const Hero = () => {
               <a href="https://linkedin.com/in/meremo" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-4 h-4" />
                 LinkedIn
-              </a>
-            </Button>
-            <Button size="lg" variant="ghost" className="gap-2" asChild>
-              <a href="https://dreamfuse.github.io/cv" target="_blank" rel="noopener noreferrer">
-                <Globe className="w-4 h-4" />
-                Web CV
               </a>
             </Button>
           </div>
