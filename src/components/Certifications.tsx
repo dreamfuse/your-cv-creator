@@ -1,39 +1,31 @@
-import { Award, ExternalLink, Calendar } from "lucide-react";
-
+import { Award, ExternalLink } from "lucide-react";
 const Certifications = () => {
-  const certifications = [
-    {
-      title: "CB3 e-Learning",
-      issuer: "Universal Robots Academy",
-      date: "December 2025",
-      pdfUrl: "/certificates/UR_CB3_Certificate.pdf",
-      color: "from-blue-500 to-indigo-500",
-    },
-    {
-      title: "Mission Programming",
-      issuer: "Mobile Industrial Robots Academy",
-      date: "December 2025",
-      pdfUrl: "/certificates/Mission_Programming.pdf",
-      color: "from-emerald-500 to-teal-500",
-    },
-    {
-      title: "Autonomous Navigation",
-      issuer: "Mobile Industrial Robots Academy",
-      date: "December 2025",
-      pdfUrl: "/certificates/Navigation.pdf",
-      color: "from-violet-500 to-purple-500",
-    },
-    {
-      title: "Personnel Safety",
-      issuer: "Mobile Industrial Robots Academy",
-      date: "December 2025",
-      pdfUrl: "/certificates/Safety.pdf",
-      color: "from-orange-500 to-amber-500",
-    },
-  ];
-
-  return (
-    <section id="certifications" className="py-24 relative overflow-hidden">
+  const certifications = [{
+    title: "CB3 e-Learning",
+    issuer: "Universal Robots Academy",
+    date: "December 2025",
+    pdfUrl: "/certificates/UR_CB3_Certificate.pdf",
+    color: "from-blue-500 to-indigo-500"
+  }, {
+    title: "Mission Programming",
+    issuer: "Mobile Industrial Robots Academy",
+    date: "December 2025",
+    pdfUrl: "/certificates/Mission_Programming.pdf",
+    color: "from-emerald-500 to-teal-500"
+  }, {
+    title: "Autonomous Navigation",
+    issuer: "Mobile Industrial Robots Academy",
+    date: "December 2025",
+    pdfUrl: "/certificates/Navigation.pdf",
+    color: "from-violet-500 to-purple-500"
+  }, {
+    title: "Personnel Safety",
+    issuer: "Mobile Industrial Robots Academy",
+    date: "December 2025",
+    pdfUrl: "/certificates/Safety.pdf",
+    color: "from-orange-500 to-amber-500"
+  }];
+  return <section id="certifications" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-secondary/30" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
 
@@ -47,17 +39,8 @@ const Certifications = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {certifications.map((cert) => (
-            <a
-              key={cert.title}
-              href={cert.pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block"
-            >
-              <div
-                className={`absolute -inset-[1px] bg-gradient-to-r ${cert.color} rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500`}
-              />
+          {certifications.map(cert => <a key={cert.title} href={cert.pdfUrl} target="_blank" rel="noopener noreferrer" className="group relative block">
+              <div className={`absolute -inset-[1px] bg-gradient-to-r ${cert.color} rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500`} />
 
               <div className="relative glass-card p-6 rounded-2xl h-full border border-border/50 group-hover:border-transparent transition-colors duration-500">
                 <div className="flex items-start justify-between gap-4">
@@ -71,26 +54,21 @@ const Certifications = () => {
                       </h3>
                       <p className="text-sm text-muted-foreground mt-1">{cert.issuer}</p>
                       <div className="flex items-center gap-2 mt-3 text-xs text-muted-foreground">
-                        <Calendar className="w-3.5 h-3.5" />
-                        <span>{cert.date}</span>
+                        
+                        
                       </div>
                     </div>
                   </div>
                   <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                 </div>
 
-                <div
-                  className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${cert.color} opacity-5 rounded-bl-[100px] rounded-tr-2xl`}
-                />
+                <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${cert.color} opacity-5 rounded-bl-[100px] rounded-tr-2xl`} />
               </div>
-            </a>
-          ))}
+            </a>)}
         </div>
 
         <div className="mt-16 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent max-w-2xl mx-auto" />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Certifications;
