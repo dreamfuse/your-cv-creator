@@ -44,6 +44,13 @@ const Projects = () => {
         "Prepared device lists for a process, including field device planning and documentation, I/O lists, wiring diagrams, and circuit diagrams.",
       tech: ["Documentation", "I/O Lists", "AutoCAD"],
     },
+    {
+      icon: Gauge,
+      title: "Valmet DNA",
+      description:
+        "Used Valmet DNA to create loops diagrams to pump water between tanks. The system incorporated PID tuning, cascade and ratio control structures, safety interlocks, GSD file interpretation, ACN I/O module configuration, and analog/digital signal scaling and data conversion.",
+      tech: ["Valmet DNA", "PID Tuning", "Cascade Control", "Safety Interlocks"],
+    },
   ];
 
   const visualComponentsProjects = [
@@ -62,7 +69,7 @@ const Projects = () => {
     },
     {
       icon: Bot,
-      title: "Universal Robot Vision Integration",
+      title: "Universal Robot Programming",
       description: "Programmed a Universal Robot, utilizing camera-based vision feedback to orient the robot and pre-configured positions to place a workpiece onto a designated board.",
       tech: ["Universal Robots", "Vision Feedback", "Pick & Place"],
     },
