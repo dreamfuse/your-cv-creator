@@ -1,49 +1,49 @@
 import { Briefcase, Calendar, GraduationCap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Experience = () => {
+  const { t } = useLanguage();
+
   const experiences = [
     {
-      title: "Talent Boost Intern",
-      company: "JAMK University of Applied Sciences",
+      title: t("experience.talentBoost.title"),
+      company: t("experience.talentBoost.company"),
       period: "Aug 2025 - Dec 2025",
-      description:
-        "Internship program focused on professional development and industry exposure in automation and robotics.",
+      description: t("experience.talentBoost.description"),
       highlights: ["Professional Development", "Industry Exposure", "Technical Training"],
     },
     {
-      title: "Marketing Intern",
-      company: "UMT Victor",
+      title: t("experience.marketing.title"),
+      company: t("experience.marketing.company"),
       period: "Nov 2024 - Mar 2025",
-      description: "Contributed to marketing initiatives and gained experience in business operations.",
+      description: t("experience.marketing.description"),
       highlights: ["Marketing", "Business Operations", "Communication"],
     },
     {
-      title: "Viitasaari Hackathon",
-      company: "Participant",
+      title: t("experience.hackathon.title"),
+      company: t("experience.hackathon.company"),
       period: "March & Sept 2025",
-      description:
-        "Participated in hackathon events, collaborating on innovative solutions and technical challenges.",
+      description: t("experience.hackathon.description"),
       highlights: ["Innovation", "Team Collaboration", "Problem Solving"],
     },
     {
-      title: "Media Club & Teaching Assistant",
-      company: "Deeper Life High School",
+      title: t("experience.mediaClub.title"),
+      company: t("experience.mediaClub.company"),
       period: "2019 - 2022",
-      description:
-        "Active member of the Media Club and served as a Teaching Assistant, developing communication and leadership skills.",
+      description: t("experience.mediaClub.description"),
       highlights: ["Leadership", "Teaching", "Media Production"],
     },
   ];
 
   const education = [
     {
-      degree: "Bachelor's in Automation and Robotics",
+      degree: t("experience.bachelorDegree"),
       school: "JAMK University of Applied Sciences",
       period: "2023 - 2027",
       location: "Jyväskylä, Finland",
     },
     {
-      degree: "High School Diploma",
+      degree: t("experience.highSchool"),
       school: "Deeper Life High School",
       period: "2016 - 2022",
       location: "Nigeria",
@@ -57,9 +57,9 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="text-center mb-12">
             <span className="text-primary text-sm font-medium tracking-widest uppercase">
-              Academic Background
+              {t("experience.educationLabel")}
             </span>
-            <h2 className="section-heading mt-4">Education</h2>
+            <h2 className="section-heading mt-4">{t("experience.educationTitle")}</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -90,9 +90,9 @@ const Experience = () => {
         {/* Experience Section */}
         <div className="text-center mb-12">
           <span className="text-primary text-sm font-medium tracking-widest uppercase">
-            Career Journey
+            {t("experience.careerLabel")}
           </span>
-          <h2 className="section-heading mt-4">Experience</h2>
+          <h2 className="section-heading mt-4">{t("experience.careerTitle")}</h2>
         </div>
 
         <div className="max-w-3xl mx-auto relative">

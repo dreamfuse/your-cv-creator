@@ -1,13 +1,16 @@
 import { Users, Lightbulb, Clock, MessageSquare, Sparkles, Eye } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
   const traits = [
-    { icon: Users, title: "Teamwork", description: "Strong collaborator" },
-    { icon: Lightbulb, title: "Problem Solving", description: "Analytical thinker" },
-    { icon: Clock, title: "Time Management", description: "Efficient & organized" },
-    { icon: MessageSquare, title: "Communication", description: "Clear & effective" },
-    { icon: Sparkles, title: "Creative Thinking", description: "Innovative approaches" },
-    { icon: Eye, title: "Attention to Detail", description: "Precision focused" },
+    { icon: Users, title: t("about.teamwork"), description: t("about.teamworkDesc") },
+    { icon: Lightbulb, title: t("about.problemSolving"), description: t("about.problemSolvingDesc") },
+    { icon: Clock, title: t("about.timeManagement"), description: t("about.timeManagementDesc") },
+    { icon: MessageSquare, title: t("about.communication"), description: t("about.communicationDesc") },
+    { icon: Sparkles, title: t("about.creativeThinking"), description: t("about.creativeThinkingDesc") },
+    { icon: Eye, title: t("about.attentionToDetail"), description: t("about.attentionToDetailDesc") },
   ];
 
   return (
@@ -16,9 +19,9 @@ const About = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-primary text-sm font-medium tracking-widest uppercase">
-              About Me
+              {t("about.label")}
             </span>
-            <h2 className="section-heading mt-4">My Profile</h2>
+            <h2 className="section-heading mt-4">{t("about.title")}</h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -26,16 +29,14 @@ const About = () => {
             <div className="space-y-6">
               <div className="glass-card p-6 rounded-xl">
                 <p className="text-lg text-foreground leading-relaxed">
-                  Third-year Automation student proficient in{" "}
-                  <span className="text-primary font-medium">TIA Portal</span> and currently
-                  learning the <span className="text-primary font-medium">Beckhoff TwinCAT</span>{" "}
-                  environment.
+                  {t("about.description1")}{" "}
+                  <span className="text-primary font-medium">TIA Portal</span> {t("about.description2")}{" "}
+                  <span className="text-primary font-medium">Beckhoff TwinCAT</span>{" "}
+                  {t("about.description3")}
                 </p>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Strong problem solver and team player, with experience working on mini-projects
-                involving multiple communication protocols. Passionate about taking innovative and
-                creative approaches to solve technical challenges.
+                {t("about.description4")}
               </p>
 
               {/* Location & Contact Info */}
@@ -50,13 +51,13 @@ const About = () => {
 
               {/* Languages */}
               <div className="pt-4">
-                <h4 className="font-heading font-semibold mb-3">Languages</h4>
+                <h4 className="font-heading font-semibold mb-3">{t("about.languages")}</h4>
                 <div className="flex gap-3">
                   <span className="px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium">
-                    English — Fluent
+                    {t("about.englishFluent")}
                   </span>
                   <span className="px-4 py-2 bg-secondary text-secondary-foreground rounded-lg text-sm font-medium">
-                    Finnish — Basic-Intermediate
+                    {t("about.finnishBasic")}
                   </span>
                 </div>
               </div>

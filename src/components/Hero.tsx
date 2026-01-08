@@ -1,7 +1,10 @@
 import { ArrowDown, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background grid pattern */}
@@ -16,7 +19,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6">
             <span className="inline-block px-4 py-2 text-sm font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
-              Automation & Robotics Engineering Student
+              {t("hero.title")}
             </span>
           </div>
 
@@ -27,15 +30,14 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Third-year Automation student proficient in TIA Portal and Beckhoff TwinCAT. 
-            Passionate about taking innovative and creative approaches to solve technical challenges.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button size="lg" className="gap-2" asChild>
               <a href="mailto:chinemeremogbonnah2@gmail.com">
                 <Mail className="w-4 h-4" />
-                Get In Touch
+                {t("hero.getInTouch")}
               </a>
             </Button>
             <Button size="lg" variant="outline" className="gap-2" asChild>
@@ -50,7 +52,7 @@ const Hero = () => {
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
           <div className="flex flex-col items-center gap-2 text-muted-foreground">
-            <span className="text-sm font-medium">Scroll to explore</span>
+            <span className="text-sm font-medium">{t("hero.scrollToExplore")}</span>
             <ArrowDown className="w-4 h-4" />
           </div>
         </div>
