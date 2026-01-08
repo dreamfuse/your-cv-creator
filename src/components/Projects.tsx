@@ -1,54 +1,50 @@
 import { Cpu, Gauge, Network, Code, Wrench, Zap, Box, Bot, Play } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Projects = () => {
+  const { t } = useLanguage();
+
   const academicProjects = [
     {
       icon: Cpu,
-      title: "Pumping Module PLC Program",
-      description:
-        "Planned and created a PLC program for a pumping module using on/off valves, pressure and temperature sensors, AS-i bus communication, VFDs, and PID controllers.",
+      title: t("projects.pumpingModule.title"),
+      description: t("projects.pumpingModule.description"),
       tech: ["TIA Portal", "AS-i Bus", "PID Control", "VFDs"],
     },
     {
       icon: Gauge,
-      title: "HMI & SCADA Development",
-      description:
-        "Built HMI and SCADA programs for a pumping module using WinCC, providing real-time monitoring and control capabilities.",
+      title: t("projects.hmiScada.title"),
+      description: t("projects.hmiScada.description"),
       tech: ["Siemens WinCC", "HMI Design", "SCADA"],
     },
     {
       icon: Wrench,
-      title: "MATLAB Process Modelling",
-      description:
-        "Modelled a process in MATLAB, tuned the system, and worked with ratio control and cascade control strategies.",
+      title: t("projects.matlab.title"),
+      description: t("projects.matlab.description"),
       tech: ["MATLAB", "Process Control", "PID Tuning"],
     },
     {
       icon: Network,
-      title: "Industrial Network Configuration",
-      description:
-        "Built and configured network structures in a virtual environment, including routing, switching, firewalls, and IPv4/IPv6 addressing.",
+      title: t("projects.network.title"),
+      description: t("projects.network.description"),
       tech: ["Networking", "Routing", "Firewalls", "IPv4/IPv6"],
     },
     {
       icon: Code,
-      title: "Modbus TCP C# Application",
-      description:
-        "Created a C# GUI program to work using the Modbus TCP communication protocol for industrial device communication.",
+      title: t("projects.modbus.title"),
+      description: t("projects.modbus.description"),
       tech: ["C#", "Modbus TCP", "GUI Development"],
     },
     {
       icon: Wrench,
-      title: "Field Device Planning",
-      description:
-        "Prepared device lists for a process, including field device planning and documentation, I/O lists, wiring diagrams, and circuit diagrams.",
+      title: t("projects.fieldDevice.title"),
+      description: t("projects.fieldDevice.description"),
       tech: ["Documentation", "I/O Lists", "AutoCAD"],
     },
     {
       icon: Gauge,
-      title: "Valmet DNA",
-      description:
-        "Used Valmet DNA to create loops diagrams to pump water between tanks. The system incorporated PID tuning, cascade and ratio control structures, safety interlocks, GSD file interpretation, ACN I/O module configuration, and analog/digital signal scaling and data conversion.",
+      title: t("projects.valmetDna.title"),
+      description: t("projects.valmetDna.description"),
       tech: ["Valmet DNA", "PID Tuning", "Cascade Control", "Safety Interlocks"],
     },
   ];
@@ -56,21 +52,21 @@ const Projects = () => {
   const visualComponentsProjects = [
     {
       icon: Box,
-      title: "Warehouse Simulation",
-      description: "Planned and modelled a simulated warehouse in Visual Components, programming two robots to carry out palletizing and pick-and-place operations while integrating safety systems and devices, and defining storage, sorting and transport zones using process nodes.",
+      title: t("projects.warehouse.title"),
+      description: t("projects.warehouse.description"),
       tech: ["Visual Components", "Robot Programming", "Safety Systems"],
       videoUrl: "https://drive.google.com/file/d/1b9Fry2TKlif9_uUJOV0OHs8p5kfmU9VT/view?usp=sharing",
     },
     {
       icon: Bot,
-      title: "MIR Robot Programming",
-      description: "Programmed a MIR robot to map out a laboratory environment, assigned safety and operational zones, localized charging zones and carried out basic navigation missions.",
+      title: t("projects.mir.title"),
+      description: t("projects.mir.description"),
       tech: ["MIR Robot", "Navigation", "Zone Mapping"],
     },
     {
       icon: Bot,
-      title: "Universal Robot Programming",
-      description: "Programmed a Universal Robot, utilizing camera-based vision feedback to orient the robot and pre-configured positions to place a workpiece onto a designated board.",
+      title: t("projects.ur.title"),
+      description: t("projects.ur.description"),
       tech: ["Universal Robots", "Vision Feedback", "Pick & Place"],
     },
   ];
@@ -78,20 +74,20 @@ const Projects = () => {
   const personalProjects = [
     {
       icon: Zap,
-      title: "Event Logger in TwinCAT",
-      description: "Developed an event logging system using Beckhoff TwinCAT and STL programming.",
+      title: t("projects.eventLogger.title"),
+      description: t("projects.eventLogger.description"),
       tech: ["Beckhoff TwinCAT", "STL"],
     },
     {
       icon: Cpu,
-      title: "Object Sorting System",
-      description: "Basic object sorting based on the type of material using TIA Portal (Simulated).",
+      title: t("projects.objectSorting.title"),
+      description: t("projects.objectSorting.description"),
       tech: ["TIA Portal", "Simulation"],
     },
     {
       icon: Code,
-      title: "Multiwindow C# Modbus App",
-      description: "Multiwindow C# GUI that communicates using Modbus TCP protocol.",
+      title: t("projects.multiwindow.title"),
+      description: t("projects.multiwindow.description"),
       tech: ["C#", "Modbus TCP", "GUI"],
     },
   ];
@@ -101,9 +97,9 @@ const Projects = () => {
       <div className="container px-6">
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium tracking-widest uppercase">
-            Portfolio
+            {t("projects.label")}
           </span>
-          <h2 className="section-heading mt-4">Academic Projects</h2>
+          <h2 className="section-heading mt-4">{t("projects.academicTitle")}</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -135,7 +131,7 @@ const Projects = () => {
         {/* Visual Components / Robot Programming */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-heading font-semibold">Visual Components & Robot Programming</h3>
+            <h3 className="text-2xl font-heading font-semibold">{t("projects.visualComponents")}</h3>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -156,7 +152,7 @@ const Projects = () => {
                       className="flex items-center gap-1.5 text-xs font-medium bg-primary text-primary-foreground px-3 py-1.5 rounded-full hover:bg-primary/90 transition-colors shadow-sm"
                     >
                       <Play className="w-3.5 h-3.5 fill-current" />
-                      Watch Video
+                      {t("projects.watchVideo")}
                     </a>
                   )}
                 </div>
@@ -179,7 +175,7 @@ const Projects = () => {
         {/* Personal Projects */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-heading font-semibold">Personal Learning Projects</h3>
+            <h3 className="text-2xl font-heading font-semibold">{t("projects.personal")}</h3>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">

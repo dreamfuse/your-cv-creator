@@ -3,8 +3,10 @@ import { Mail, Linkedin, MapPin, Phone, Send, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,11 +22,11 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "chinemeremogbonnah2@gmail.com", href: "mailto:chinemeremogbonnah2@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+358 46 543 3500", href: "tel:+358465433500" },
+    { icon: Mail, label: t("contact.email"), value: "chinemeremogbonnah2@gmail.com", href: "mailto:chinemeremogbonnah2@gmail.com" },
+    { icon: Phone, label: t("contact.phone"), value: "+358 46 543 3500", href: "tel:+358465433500" },
     { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/meremo", href: "https://linkedin.com/in/meremo" },
-    { icon: Globe, label: "Web CV", value: "merem.lovable.app", href: "https://merem.lovable.app" },
-    { icon: MapPin, label: "Location", value: "Jyväskylä, Finland", href: null },
+    { icon: Globe, label: t("contact.webCv"), value: "merem.lovable.app", href: "https://merem.lovable.app" },
+    { icon: MapPin, label: t("contact.location"), value: "Jyväskylä, Finland", href: null },
   ];
 
   const references = [
@@ -37,11 +39,11 @@ const Contact = () => {
       <div className="container px-6">
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium tracking-widest uppercase">
-            Get In Touch
+            {t("contact.label")}
           </span>
-          <h2 className="section-heading mt-4">Let's Connect</h2>
+          <h2 className="section-heading mt-4">{t("contact.title")}</h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Interested in automation projects or collaboration opportunities? Feel free to reach out!
+            {t("contact.description")}
           </p>
         </div>
 
@@ -68,7 +70,7 @@ const Contact = () => {
 
             {/* References */}
             <div className="mt-8 pt-6 border-t border-border">
-              <h3 className="font-heading font-semibold mb-4">References</h3>
+              <h3 className="font-heading font-semibold mb-4">{t("contact.references")}</h3>
               <div className="space-y-3">
                 {references.map((ref) => (
                   <div key={ref.name} className="p-3 bg-muted/50 rounded-lg">
@@ -85,7 +87,7 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid gap-4">
               <Input
-                placeholder="Your Name"
+                placeholder={t("contact.yourName")}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
@@ -93,14 +95,14 @@ const Contact = () => {
               />
               <Input
                 type="email"
-                placeholder="Your Email"
+                placeholder={t("contact.yourEmail")}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
                 className="bg-card border-border focus:border-primary"
               />
               <Textarea
-                placeholder="Your Message"
+                placeholder={t("contact.yourMessage")}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
@@ -110,7 +112,7 @@ const Contact = () => {
             </div>
             <Button type="submit" size="lg" className="w-full gap-2">
               <Send className="w-4 h-4" />
-              Send Message
+              {t("contact.sendMessage")}
             </Button>
           </form>
         </div>

@@ -1,53 +1,56 @@
 import { Cpu, Wrench, Code, Network, Zap, BookOpen } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Skills = () => {
+  const { t } = useLanguage();
+
   const skillCategories = [
     {
       icon: Cpu,
-      title: "PLC & Automation",
-      description: "Industrial control systems and programming",
+      title: t("skills.plcAutomation"),
+      description: t("skills.plcAutomationDesc"),
       skills: ["TIA Portal", "Ladder Logic", "FBD", "SFC", "Beckhoff TwinCAT", "STL Programming"],
       color: "from-cyan-500 to-blue-500",
     },
     {
       icon: Wrench,
-      title: "Engineering Tools",
-      description: "Design and simulation software",
+      title: t("skills.engineeringTools"),
+      description: t("skills.engineeringToolsDesc"),
       skills: ["AutoCAD", "MATLAB", "Valmet DNA", "Siemens WinCC", "ABB DriveSize", "Valmet NelProf"],
       color: "from-violet-500 to-purple-500",
     },
     {
       icon: Network,
-      title: "Communication Protocols",
-      description: "Industrial networking and data exchange",
+      title: t("skills.communicationProtocols"),
+      description: t("skills.communicationProtocolsDesc"),
       skills: ["Profibus/Profinet", "Modbus TCP", "AS-i Bus", "IPv4/IPv6", "Routing & Switching"],
       color: "from-emerald-500 to-teal-500",
     },
     {
       icon: Code,
-      title: "Programming & IT",
-      description: "Software development and systems",
+      title: t("skills.programmingIt"),
+      description: t("skills.programmingItDesc"),
       skills: ["C# Programming", "Python", "GitHub", "Microsoft Office 365", "Network Configuration"],
       color: "from-orange-500 to-amber-500",
     },
     {
       icon: Wrench,
-      title: "Process Engineering",
-      description: "System design and analysis",
+      title: t("skills.processEngineering"),
+      description: t("skills.processEngineeringDesc"),
       skills: ["HMI & SCADA Development", "DCS Systems", "PID Control", "Field Instrumentation", "Motor & Valve Sizing"],
       color: "from-rose-500 to-pink-500",
     },
     {
       icon: BookOpen,
-      title: "Safety & Standards",
-      description: "Compliance and risk management",
+      title: t("skills.safetyStandards"),
+      description: t("skills.safetyStandardsDesc"),
       skills: ["Risk Analysis", "Safety Planning", "Safety Design", "Documentation", "I/O Lists"],
       color: "from-indigo-500 to-blue-500",
     },
     {
       icon: Cpu,
-      title: "Robotics",
-      description: "Robot systems and analysis",
+      title: t("skills.robotics"),
+      description: t("skills.roboticsDesc"),
       skills: ["Visual Components", "HAZOP Analysis", "Risk Assessment"],
       color: "from-sky-500 to-cyan-500",
     },
@@ -71,9 +74,9 @@ const Skills = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-4">
             <Zap className="w-4 h-4 text-primary" />
-            <span className="text-primary text-sm font-medium">Technical Expertise</span>
+            <span className="text-primary text-sm font-medium">{t("skills.label")}</span>
           </div>
-          <h2 className="section-heading">Skills & Proficiencies</h2>
+          <h2 className="section-heading">{t("skills.title")}</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -122,7 +125,7 @@ const Skills = () => {
               <div className="p-2 rounded-lg bg-primary/10">
                 <BookOpen className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-heading font-semibold text-lg">Currently Learning</h3>
+              <h3 className="font-heading font-semibold text-lg">{t("skills.currentlyLearning")}</h3>
             </div>
             <div className="flex flex-wrap gap-3">
               {currentlyLearning.map((item) => (

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,13 +17,17 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
-    { href: "#certifications", label: "Certifications" },
-    { href: "#contact", label: "Contact" },
+    { href: "#about", label: t("nav.about") },
+    { href: "#skills", label: t("nav.skills") },
+    { href: "#projects", label: t("nav.projects") },
+    { href: "#experience", label: t("nav.experience") },
+    { href: "#certifications", label: t("nav.certifications") },
+    { href: "#contact", label: t("nav.contact") },
   ];
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "fi" : "en");
+  };
 
   return (
     <nav
@@ -48,22 +54,42 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
+            
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors border border-border rounded-full hover:border-primary/50"
+            >
+              <Globe className="w-4 h-4" />
+              <span>{language === "en" ? "FI" : "EN"}</span>
+            </button>
+            
             <Button size="sm" asChild>
               <a href="/Ogbonnah_Chinemerem_CV.pdf" download>
-                Download CV
+                {t("nav.downloadCv")}
               </a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
+          <div className="md:hidden flex items-center gap-2">
+            {/* Mobile Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 px-2 py-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors border border-border rounded-full"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              <span>{language === "en" ? "FI" : "EN"}</span>
+            </button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -83,7 +109,7 @@ const Navigation = () => {
             ))}
             <Button size="sm" className="w-full" asChild>
               <a href="/Ogbonnah_Chinemerem_CV.pdf" download>
-                Download CV
+                {t("nav.downloadCv")}
               </a>
             </Button>
           </div>

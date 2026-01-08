@@ -1,6 +1,8 @@
 import { Linkedin, Mail, Globe, Heart } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
       <div className="container px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            © {currentYear} Ogbonnah Chinemerem. Built with 
+            © {currentYear} Ogbonnah Chinemerem. {t("footer.builtWith")} 
             <Heart className="w-4 h-4 text-primary fill-primary" />
           </p>
           
@@ -23,7 +25,7 @@ const Footer = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://dreamfuse.github.io/cv"
+              href="https://merem.lovable.app"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-muted-foreground hover:text-primary transition-colors"
