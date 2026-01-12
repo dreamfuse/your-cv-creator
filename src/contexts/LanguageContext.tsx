@@ -91,7 +91,7 @@ const translations = {
     "projects.valmetDna.description": "Used Valmet DNA to create loops diagrams to pump water between tanks. The system incorporated PID tuning, cascade and ratio control structures, safety interlocks, GSD file interpretation, ACN I/O module configuration, and analog/digital signal scaling and data conversion.",
     
     // Visual Components Projects
-    "projects.warehouse.title": "Warehouse Simulation",
+    "projects.warehouse.title": "Warehouse Simulation using Visual Components",
     "projects.warehouse.description": "Planned and modelled a simulated warehouse in Visual Components, programming two robots to carry out palletizing and pick-and-place operations while integrating safety systems and devices, and defining storage, sorting and transport zones using process nodes.",
     "projects.mir.title": "MIR Robot Programming",
     "projects.mir.description": "Programmed a MIR robot to map out a laboratory environment, assigned safety and operational zones, localized charging zones and carried out basic navigation missions.",
@@ -233,7 +233,7 @@ const translations = {
     "projects.valmetDna.description": "Käytin Valmet DNA:ta luodakseni silmukkakaavioita veden pumppaamiseen säiliöiden välillä. Järjestelmä sisälsi PID-virityksen, kaskadi- ja suhdesäätörakenteet, turvalukkitukset, GSD-tiedoston tulkinnan, ACN I/O-moduulin konfiguroinnin sekä analogisen/digitaalisen signaalin skaalauksen ja datan muuntamisen.",
     
     // Visual Components Projects
-    "projects.warehouse.title": "Varastosimulointia",
+    "projects.warehouse.title": "Varastosimulointia Visual Componentsilla",
     "projects.warehouse.description": "Suunnittelin ja mallinsin simuloidun varaston Visual Componentsissa, ohjelmoiden kaksi robottia suorittamaan lavaus- ja poimintaoperaatioita samalla integroiden turvajärjestelmiä ja -laitteita, ja määritellen varastointi-, lajittelu- ja kuljetusalueet prosessisolmujen avulla.",
     "projects.mir.title": "MIR-robotti ohjelmointi",
     "projects.mir.description": "Ohjelmoin MIR-robotin kartoittamaan laboratorioympäristön, määritin turva- ja toiminta-alueet, paikansin latausasemat ja suoritin perusnavigointitehtäviä.",
