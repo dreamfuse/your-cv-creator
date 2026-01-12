@@ -18,10 +18,10 @@ const Projects = () => {
       tech: ["Siemens WinCC", "HMI Design", "SCADA"],
     },
     {
-      icon: Wrench,
-      title: t("projects.matlab.title"),
-      description: t("projects.matlab.description"),
-      tech: ["MATLAB", "Process Control", "PID Tuning"],
+      icon: Gauge,
+      title: t("projects.valmetDna.title"),
+      description: t("projects.valmetDna.description"),
+      tech: ["Valmet DNA", "PID Tuning", "Cascade Control", "Safety Interlocks"],
     },
     {
       icon: Network,
@@ -42,10 +42,10 @@ const Projects = () => {
       tech: ["Documentation", "I/O Lists", "AutoCAD"],
     },
     {
-      icon: Gauge,
-      title: t("projects.valmetDna.title"),
-      description: t("projects.valmetDna.description"),
-      tech: ["Valmet DNA", "PID Tuning", "Cascade Control", "Safety Interlocks"],
+      icon: Wrench,
+      title: t("projects.matlab.title"),
+      description: t("projects.matlab.description"),
+      tech: ["MATLAB", "Process Control", "PID Tuning"],
     },
   ];
 
