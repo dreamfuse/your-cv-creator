@@ -95,7 +95,7 @@ const translations = {
     "projects.warehouse.description": "Planned and modelled a simulated warehouse in Visual Components, programming two robots to carry out palletizing and pick-and-place operations while integrating safety systems and devices, and defining storage, sorting and transport zones using process nodes.",
     "projects.mir.title": "Basic MIR Robot Programming",
     "projects.mir.description": "Programmed a MIR robot to map out a laboratory environment, assigned safety and operational zones, localized charging zones and carried out basic navigation missions.",
-    "projects.ur.title": "Universal Robot Programming",
+    "projects.ur.title": "Basic Universal Robot Programming",
     "projects.ur.description": "Programmed a Universal Robot, utilizing camera-based vision feedback to orient the robot and pre-configured positions to place a workpiece onto a designated board.",
     
     // Personal Projects
@@ -237,7 +237,7 @@ const translations = {
     "projects.warehouse.description": "Suunnittelin ja mallinsin simuloidun varaston Visual Componentsissa, ohjelmoiden kaksi robottia suorittamaan lavaus- ja poimintaoperaatioita samalla integroiden turvajärjestelmiä ja -laitteita, ja määritellen varastointi-, lajittelu- ja kuljetusalueet prosessisolmujen avulla.",
     "projects.mir.title": "MIR-robotin perusohjelmointi",
     "projects.mir.description": "Ohjelmoin MIR-robotin kartoittamaan laboratorioympäristön, määritin turva- ja toiminta-alueet, paikansin latausasemat ja suoritin perusnavigointitehtäviä.",
-    "projects.ur.title": "Universal Robot -ohjelmointi",
+    "projects.ur.title": "Universal Robotin perusohjelmointi",
     "projects.ur.description": "Ohjelmoin Universal Robotin käyttäen kameraperusteista näköpalautetta robotin suuntaamiseen ja ennalta määritettyjä asemia työkappaleen sijoittamiseksi määrätylle laudalle.",
     
     // Personal Projects
