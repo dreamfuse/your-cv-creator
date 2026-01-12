@@ -70,6 +70,12 @@ const translations = {
     "skills.learning.machineVision": "Machine Vision",
     "skills.learning.industrialRobotics": "Industrial Robotics",
     "skills.learning.projectEconomics": "Engineering Project Economics",
+    "skills.learning.stl": "PLC Programming in STL",
+    "skills.learning.twincat": "Beckhoff TwinCAT Environment",
+    "skills.learning.python": "Python Programming",
+    "skills.learning.valmetDna": "Valmet DNA Skills",
+    "skills.learning.pidTuning": "PID-Tuning Methods",
+    "skills.learning.mpc": "Model Predictive Control",
 
     // Projects
     "projects.label": "Portfolio",
@@ -216,6 +222,12 @@ const translations = {
     "skills.learning.machineVision": "Konenäkö",
     "skills.learning.industrialRobotics": "Teollisuusrobotiikka",
     "skills.learning.projectEconomics": "Insinööriprojektien talous",
+    "skills.learning.stl": "PLC-ohjelmointi STL:llä",
+    "skills.learning.twincat": "Beckhoff TwinCAT -ympäristö",
+    "skills.learning.python": "Python-ohjelmointi",
+    "skills.learning.valmetDna": "Valmet DNA -taidot",
+    "skills.learning.pidTuning": "PID-säätömenetelmät",
+    "skills.learning.mpc": "Malliprediktiivinen säätö",
 
     // Projects
     "projects.label": "Portfolio",

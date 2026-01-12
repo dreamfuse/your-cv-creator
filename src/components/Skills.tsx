@@ -61,6 +61,12 @@ const Skills = () => {
     { name: t("skills.learning.machineVision"), icon: Cpu, color: "from-violet-500 to-purple-500" },
     { name: t("skills.learning.industrialRobotics"), icon: Wrench, color: "from-emerald-500 to-teal-500" },
     { name: t("skills.learning.projectEconomics"), icon: TrendingUp, color: "from-orange-500 to-amber-500" },
+    { name: t("skills.learning.stl"), icon: Code, color: "from-rose-500 to-pink-500" },
+    { name: t("skills.learning.twincat"), icon: Cpu, color: "from-indigo-500 to-blue-500" },
+    { name: t("skills.learning.python"), icon: Code, color: "from-yellow-500 to-green-500" },
+    { name: t("skills.learning.valmetDna"), icon: Wrench, color: "from-sky-500 to-cyan-500" },
+    { name: t("skills.learning.pidTuning"), icon: Zap, color: "from-red-500 to-orange-500" },
+    { name: t("skills.learning.mpc"), icon: Cpu, color: "from-purple-500 to-violet-500" },
   ];
 
   return (
