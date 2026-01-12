@@ -1,4 +1,4 @@
-import { Cpu, Wrench, Code, Network, Zap, BookOpen } from "lucide-react";
+import { Cpu, Wrench, Code, Network, Zap, BookOpen, Sparkles, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Skills = () => {
@@ -57,12 +57,10 @@ const Skills = () => {
   ];
 
   const currentlyLearning = [
-    "PLC Programming in STL",
-    "Beckhoff TwinCAT Environment",
-    "Python Programming",
-    "Valmet DNA Skills",
-    "PID-Tuning Methods",
-    "Model Predictive Control",
+    { name: t("skills.learning.opcua"), icon: Network, color: "from-cyan-500 to-blue-500" },
+    { name: t("skills.learning.machineVision"), icon: Cpu, color: "from-violet-500 to-purple-500" },
+    { name: t("skills.learning.industrialRobotics"), icon: Wrench, color: "from-emerald-500 to-teal-500" },
+    { name: t("skills.learning.projectEconomics"), icon: TrendingUp, color: "from-orange-500 to-amber-500" },
   ];
 
   return (
@@ -120,22 +118,49 @@ const Skills = () => {
 
         {/* Currently Learning Section */}
         <div className="mt-16 max-w-4xl mx-auto">
-          <div className="glass-card p-6 rounded-2xl border border-primary/20">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-primary/10">
-                <BookOpen className="w-5 h-5 text-primary" />
+          <div className="relative group">
+            {/* Animated gradient border */}
+            <div className="absolute -inset-[2px] bg-gradient-to-r from-cyan-500 via-purple-500 to-orange-500 rounded-3xl opacity-75 blur-sm group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+            
+            <div className="relative glass-card p-8 rounded-3xl border border-transparent bg-background/95 backdrop-blur-xl">
+              {/* Header */}
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/50 shadow-lg shadow-primary/25">
+                  <Sparkles className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl bg-gradient-to-r from-primary via-purple-500 to-orange-500 bg-clip-text text-transparent">
+                  {t("skills.currentlyLearning")}
+                </h3>
               </div>
-              <h3 className="font-heading font-semibold text-lg">{t("skills.currentlyLearning")}</h3>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {currentlyLearning.map((item) => (
-                <span
-                  key={item}
-                  className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary rounded-full border border-primary/30"
-                >
-                  {item}
-                </span>
-              ))}
+              
+              {/* Learning Items Grid */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                {currentlyLearning.map((item, index) => (
+                  <div
+                    key={item.name}
+                    className="group/item relative overflow-hidden"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-0 group-hover/item:opacity-10 transition-opacity duration-300 rounded-xl`} />
+                    
+                    <div className="relative flex items-center gap-4 p-4 rounded-xl border border-border/50 hover:border-primary/50 bg-muted/30 hover:bg-muted/50 transition-all duration-300">
+                      <div className={`p-2.5 rounded-lg bg-gradient-to-br ${item.color} shadow-md`}>
+                        <item.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="font-medium text-foreground group-hover/item:text-primary transition-colors">
+                        {item.name}
+                      </span>
+                      <div className="ml-auto">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full blur-2xl" />
+              <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-full blur-2xl" />
             </div>
           </div>
         </div>

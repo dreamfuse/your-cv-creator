@@ -66,6 +66,10 @@ const translations = {
     "skills.safetyStandardsDesc": "Compliance and risk management",
     "skills.robotics": "Robotics",
     "skills.roboticsDesc": "Robot systems and analysis",
+    "skills.learning.opcua": "OPC UA",
+    "skills.learning.machineVision": "Machine Vision",
+    "skills.learning.industrialRobotics": "Industrial Robotics",
+    "skills.learning.projectEconomics": "Engineering Project Economics",
 
     // Projects
     "projects.label": "Portfolio",
@@ -208,6 +212,10 @@ const translations = {
     "skills.safetyStandardsDesc": "Vaatimustenmukaisuus ja riskienhallinta",
     "skills.robotics": "Robotiikka",
     "skills.roboticsDesc": "Robottijärjestelmät ja analyysi",
+    "skills.learning.opcua": "OPC UA",
+    "skills.learning.machineVision": "Konenäkö",
+    "skills.learning.industrialRobotics": "Teollisuusrobotiikka",
+    "skills.learning.projectEconomics": "Insinööriprojektien talous",
 
     // Projects
     "projects.label": "Portfolio",
