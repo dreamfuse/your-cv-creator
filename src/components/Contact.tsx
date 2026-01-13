@@ -71,7 +71,7 @@ const Contact = () => {
             {/* References */}
             <div className="mt-8 pt-6 border-t border-border">
               <h3 className="font-heading font-semibold mb-4">{t("contact.references")}</h3>
-              <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
                 {references.map((ref) => (
                   <div key={ref.name} className="p-3 bg-muted/50 rounded-lg">
                     <p className="font-medium">{ref.name}</p>
