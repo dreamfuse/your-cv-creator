@@ -148,7 +148,7 @@ const translations = {
     // Contact
     "contact.label": "Get In Touch",
     "contact.title": "Let's Connect",
-    "contact.description": "Interested in automation projects or collaboration opportunities? Feel free to reach out!",
+    "contact.description": "Open to internship opportunities and collaborations in automation, robotics, and control engineering. Feel free to reach out!",
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.location": "Location",
@@ -301,7 +301,7 @@ const translations = {
     // Contact
     "contact.label": "Ota yhteyttä",
     "contact.title": "Pidetään yhteyttä",
-    "contact.description": "Kiinnostunut automaatioprojekteista tai yhteistyömahdollisuuksista? Ota rohkeasti yhteyttä!",
+    "contact.description": "Avoin harjoittelumahdollisuuksille ja yhteistyölle automaation, robotiikan ja säätötekniikan parissa. Ota rohkeasti yhteyttä!",
     "contact.email": "Sähköposti",
     "contact.phone": "Puhelin",
     "contact.location": "Sijainti",
