@@ -21,7 +21,7 @@ const translations = {
 
     // Hero
     "hero.title": "Automation & Robotics Engineering Student",
-    "hero.description": "Third-year Automation student proficient in TIA Portal and Beckhoff TwinCAT. Passionate about taking innovative and creative approaches to solve technical challenges.",
+    "hero.description": "Third-year Automation student with a strong interest in PLC programming, industrial automation, and robotic systems. Passionate about taking innovative and creative approaches to solve technical challenges.",
     "hero.getInTouch": "Get In Touch",
     "hero.scrollToExplore": "Scroll to explore",
 
@@ -174,7 +174,7 @@ const translations = {
 
     // Hero
     "hero.title": "Automaatio- ja robotiikkatekniikan opiskelija",
-    "hero.description": "Kolmannen vuoden automaatio-opiskelija, joka osaa TIA Portalin ja Beckhoff TwinCATin. Innostunut innovatiivisista ja luovista lähestymistavoista teknisten haasteiden ratkaisemiseen.",
+    "hero.description": "Kolmannen vuoden automaatio-opiskelija, jolla on vahva kiinnostus PLC-ohjelmointiin, teollisuusautomaatioon ja robottijärjestelmiin. Innostunut innovatiivisista ja luovista lähestymistavoista teknisten haasteiden ratkaisemiseen.",
     "hero.getInTouch": "Ota yhteyttä",
     "hero.scrollToExplore": "Vieritä tutkiaksesi",
 
