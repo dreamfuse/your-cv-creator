@@ -125,37 +125,30 @@ const Skills = () => {
         {/* Currently Learning Section */}
         <div className="mt-16 max-w-6xl mx-auto">
           <div className="group relative">
-            <div
-              className="absolute -inset-[1px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"
-            />
+            {/* Subtle animated gradient border */}
+            <div className="absolute -inset-[1px] bg-gradient-to-r from-primary via-cyan-500 to-primary rounded-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <div className="relative glass-card p-5 rounded-2xl border border-border/50 group-hover:border-transparent transition-colors duration-500">
-              <div className="flex items-start gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-gradient-to-br from-primary to-cyan-500 shadow-lg">
-                  <Zap className="w-5 h-5 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-heading font-semibold text-base group-hover:text-primary transition-colors">
-                    {t("skills.currentlyLearning")}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">{t("skills.currentlyLearningDesc")}</p>
-                </div>
+            <div className="relative glass-card p-6 rounded-2xl border-0 bg-background/95 backdrop-blur-xl">
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
+                <h3 className="font-heading font-semibold text-lg text-primary px-4">
+                  {t("skills.currentlyLearning")}
+                </h3>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
               </div>
+              
+              <p className="text-sm text-muted-foreground text-center mb-6">{t("skills.currentlyLearningDesc")}</p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap justify-center gap-3">
                 {currentlyLearning.map((skill) => (
                   <span
                     key={skill}
-                    className="px-2.5 py-1.5 text-xs font-medium bg-muted/50 rounded-md border border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all"
+                    className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary rounded-full border border-primary/30 hover:bg-primary/20 hover:border-primary/50 transition-all"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
-
-              <div
-                className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary to-cyan-500 opacity-5 rounded-bl-[80px] rounded-tr-2xl"
-              />
             </div>
           </div>
         </div>
