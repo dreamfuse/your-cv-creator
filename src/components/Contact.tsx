@@ -76,7 +76,7 @@ const Contact = () => {
                   <div key={ref.name} className="p-3 bg-muted/50 rounded-lg">
                     <p className="font-medium">{ref.name}</p>
                     <p className="text-sm text-muted-foreground">{ref.role}</p>
-                    <a href={`mailto:${ref.contact}`} className="text-sm text-primary hover:underline">{ref.contact}</a>
+                    <p className="text-sm text-primary">{ref.contact}</p>
                   </div>
                 ))}
               </div>
