@@ -30,8 +30,8 @@ const Contact = () => {
   ];
 
   const references = [
-    { name: "Anna Tenhunen", role: "Talent Boost Coordinator", phone: "+358 50 411 2215" },
-    { name: "Victor Solovev", role: "UMT Victor", phone: "+358 41 317 8791" },
+    { name: "Anna Tenhunen", role: "Talent Boost Coordinator", contact: "anna.tenhunen@jamk.fi" },
+    { name: "Victor Solovev", role: "UMT Victor", contact: "victor.solovev@umtvictor.fi" },
   ];
 
   return (
@@ -72,11 +72,11 @@ const Contact = () => {
             <div className="mt-8 pt-6 border-t border-border">
               <h3 className="font-heading font-semibold mb-4">{t("contact.references")}</h3>
               <div className="grid grid-cols-2 gap-3">
-                {references.map((ref) => (
+              {references.map((ref) => (
                   <div key={ref.name} className="p-3 bg-muted/50 rounded-lg">
                     <p className="font-medium">{ref.name}</p>
                     <p className="text-sm text-muted-foreground">{ref.role}</p>
-                    <p className="text-sm text-primary">{ref.phone}</p>
+                    <a href={`mailto:${ref.contact}`} className="text-sm text-primary hover:underline">{ref.contact}</a>
                   </div>
                 ))}
               </div>

@@ -77,6 +77,7 @@ const translations = {
     "skills.learning.valmetDna": "Valmet DNA Skills",
     "skills.learning.pidTuning": "PID-Tuning Methods",
     "skills.learning.mpc": "Model Predictive Control",
+    "skills.learning.avevaIntouch": "AVEVA InTouch",
 
     // Projects
     "projects.label": "Portfolio",
@@ -230,6 +231,7 @@ const translations = {
     "skills.learning.valmetDna": "Valmet DNA -taidot",
     "skills.learning.pidTuning": "PID-säätömenetelmät",
     "skills.learning.mpc": "Malliprediktiivinen säätö",
+    "skills.learning.avevaIntouch": "AVEVA InTouch",
 
     // Projects
     "projects.label": "Portfolio",

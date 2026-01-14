@@ -67,6 +67,7 @@ const Skills = () => {
     t("skills.learning.valmetDna"),
     t("skills.learning.pidTuning"),
     t("skills.learning.mpc"),
+    t("skills.learning.avevaIntouch"),
   ];
 
   return (
