@@ -34,7 +34,7 @@ const translations = {
     "about.description4": "Strong problem solver and team player, with experience working on mini-projects involving multiple communication protocols. Passionate about taking innovative and creative approaches to solve technical challenges.",
     "about.languages": "Languages",
     "about.englishFluent": "English — Fluent",
-    "about.finnishBasic": "Finnish — Basic-Intermediate",
+    "about.finnishBasic": "Finnish — Intermediate",
     "about.teamwork": "Teamwork",
     "about.teamworkDesc": "Strong collaborator",
     "about.problemSolving": "Problem Solving",
@@ -117,6 +117,8 @@ const translations = {
     "projects.objectSorting.description": "Basic object sorting based on the type of material using TIA Portal (Simulated).",
     "projects.multiwindow.title": "Multiwindow C# Modbus App",
     "projects.multiwindow.description": "Multiwindow C# GUI that communicates using Modbus TCP protocol.",
+    "projects.modbusComm.title": "Modbus Communication in TwinCAT",
+    "projects.modbusComm.description": "Created a program using Beckhoff TwinCAT to implement Modbus communication protocol.",
 
     // Experience
     "experience.educationLabel": "Academic Background",
@@ -188,7 +190,7 @@ const translations = {
     "about.description4": "Vahva ongelmanratkaisija ja tiimipelaaja, jolla on kokemusta mini-projekteista useiden tiedonsiirtoprotokollien parissa. Innostunut innovatiivisista ja luovista lähestymistavoista teknisten haasteiden ratkaisemiseen.",
     "about.languages": "Kielet",
     "about.englishFluent": "Englanti — Sujuva",
-    "about.finnishBasic": "Suomi — Perus-keskitaso",
+    "about.finnishBasic": "Suomi — Keskitaso",
     "about.teamwork": "Tiimityö",
     "about.teamworkDesc": "Vahva yhteistyökyky",
     "about.problemSolving": "Ongelmanratkaisu",
@@ -271,6 +273,8 @@ const translations = {
     "projects.objectSorting.description": "Perusesineiden lajittelu materiaalityypin perusteella TIA Portalilla (Simuloitu).",
     "projects.multiwindow.title": "Moni-ikkunainen C# Modbus-sovellus",
     "projects.multiwindow.description": "Moni-ikkunainen C# GUI, joka kommunikoi Modbus TCP -protokollan avulla.",
+    "projects.modbusComm.title": "Modbus-viestintä TwinCATissa",
+    "projects.modbusComm.description": "Loin ohjelman Beckhoff TwinCATilla Modbus-tiedonsiirtoprotokollan toteuttamiseksi.",
 
     // Experience
     "experience.educationLabel": "Akateeminen tausta",

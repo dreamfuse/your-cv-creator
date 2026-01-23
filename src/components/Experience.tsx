@@ -41,6 +41,7 @@ const Experience = () => {
       school: "JAMK University of Applied Sciences",
       period: "2023 - 2027",
       location: "Jyväskylä, Finland",
+      link: "https://www.jamk.fi/en/apply-to-Jamk/bachelors-degree/become-an-automation-and-robotics-professional",
     },
     {
       degree: t("experience.highSchool"),
@@ -74,7 +75,18 @@ const Experience = () => {
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold text-lg">{edu.degree}</h3>
-                    <p className="text-primary font-medium mt-1">{edu.school}</p>
+                    {edu.link ? (
+                      <a
+                        href={edu.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary font-medium mt-1 hover:underline inline-block"
+                      >
+                        {edu.school}
+                      </a>
+                    ) : (
+                      <p className="text-primary font-medium mt-1">{edu.school}</p>
+                    )}
                     <div className="flex items-center gap-2 text-muted-foreground text-sm mt-2">
                       <Calendar className="w-4 h-4" />
                       <span>{edu.period}</span>
