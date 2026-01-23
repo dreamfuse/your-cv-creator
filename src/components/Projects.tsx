@@ -90,6 +90,12 @@ const Projects = () => {
       description: t("projects.multiwindow.description"),
       tech: ["C#", "Modbus TCP", "GUI"],
     },
+    {
+      icon: Network,
+      title: t("projects.modbusComm.title"),
+      description: t("projects.modbusComm.description"),
+      tech: ["Beckhoff TwinCAT", "Modbus"],
+    },
   ];
 
   return (
