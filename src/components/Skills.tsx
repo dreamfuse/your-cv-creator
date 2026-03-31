@@ -30,7 +30,7 @@ const Skills = () => {
       icon: Code,
       title: t("skills.programmingIt"),
       description: t("skills.programmingItDesc"),
-      skills: ["C# Programming", "Python", "GitHub", "Microsoft Office 365", "Network Configuration"],
+      skills: ["Python", "C# Programming", "GitHub", "Microsoft Office 365", "Network Configuration"],
       color: "from-orange-500 to-amber-500",
     },
     {
