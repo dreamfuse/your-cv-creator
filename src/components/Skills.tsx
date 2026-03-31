@@ -9,7 +9,7 @@ const Skills = () => {
       icon: Cpu,
       title: t("skills.plcAutomation"),
       description: t("skills.plcAutomationDesc"),
-      skills: ["TIA Portal", "Ladder Logic", "FBD", "SFC", "Beckhoff TwinCAT", "STL Programming"],
+      skills: ["TIA Portal", "Beckhoff TwinCAT", "Valmet DNA", "Ladder Logic", "FBD", "STL Programming", "SFC"],
       color: "from-cyan-500 to-blue-500",
     },
     {
