@@ -51,7 +51,7 @@ const Skills = () => {
       icon: Cpu,
       title: t("skills.robotics"),
       description: t("skills.roboticsDesc"),
-      skills: ["Visual Components", "HAZOP Analysis", "Risk Assessment"],
+      skills: ["Visual Components", "Machine Vision", "HAZOP Analysis", "Risk Assessment"],
       color: "from-sky-500 to-cyan-500",
     },
   ];
