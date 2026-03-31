@@ -23,7 +23,7 @@ const Skills = () => {
       icon: Network,
       title: t("skills.communicationProtocols"),
       description: t("skills.communicationProtocolsDesc"),
-      skills: ["Profibus/Profinet", "Modbus TCP", "OPC UA", "AS-i Bus", "IPv4/IPv6", "Routing & Switching"],
+      skills: ["Profibus/Profinet", "OPC UA", "Modbus TCP", "AS-i Bus", "IPv4/IPv6", "Routing & Switching"],
       color: "from-emerald-500 to-teal-500",
     },
     {
