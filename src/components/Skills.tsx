@@ -44,7 +44,7 @@ const Skills = () => {
       icon: BookOpen,
       title: t("skills.safetyStandards"),
       description: t("skills.safetyStandardsDesc"),
-      skills: ["Risk Analysis", "Safety Planning", "Safety Design", "Documentation", "I/O Lists"],
+      skills: ["Safety Planning", "Risk Analysis", "Safety Design", "Documentation", "I/O Lists"],
       color: "from-indigo-500 to-blue-500",
     },
     {
