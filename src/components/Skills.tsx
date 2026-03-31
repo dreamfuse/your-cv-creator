@@ -16,7 +16,7 @@ const Skills = () => {
       icon: Wrench,
       title: t("skills.engineeringTools"),
       description: t("skills.engineeringToolsDesc"),
-      skills: ["AutoCAD", "MATLAB", "Valmet DNA", "Siemens WinCC", "ABB DriveSize", "Valmet NelProf"],
+      skills: ["AutoCAD", "Siemens WinCC", "MATLAB", "ABB DriveSize", "Valmet NelProf"],
       color: "from-violet-500 to-purple-500",
     },
     {
