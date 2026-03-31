@@ -57,17 +57,12 @@ const Skills = () => {
   ];
 
   const currentlyLearning = [
-    t("skills.learning.opcua"),
-    t("skills.learning.machineVision"),
     t("skills.learning.industrialRobotics"),
     t("skills.learning.projectEconomics"),
-    t("skills.learning.stl"),
-    t("skills.learning.twincat"),
     t("skills.learning.python"),
     t("skills.learning.valmetDna"),
     t("skills.learning.pidTuning"),
     t("skills.learning.mpc"),
-    t("skills.learning.avevaIntouch"),
   ];
 
   return (
