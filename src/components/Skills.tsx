@@ -37,7 +37,7 @@ const Skills = () => {
       icon: Wrench,
       title: t("skills.processEngineering"),
       description: t("skills.processEngineeringDesc"),
-      skills: ["HMI & SCADA Development", "DCS Systems", "PID Control", "Field Instrumentation", "Motor & Valve Sizing"],
+      skills: ["HMI & SCADA Development", "DCS Systems", "PID Control", "Field Instrumentation", "Motor & Valve Sizing", "AVEVA InTouch"],
       color: "from-rose-500 to-pink-500",
     },
     {
