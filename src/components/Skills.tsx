@@ -23,7 +23,7 @@ const Skills = () => {
       icon: Network,
       title: t("skills.communicationProtocols"),
       description: t("skills.communicationProtocolsDesc"),
-      skills: ["Profibus/Profinet", "Modbus TCP", "AS-i Bus", "IPv4/IPv6", "Routing & Switching"],
+      skills: ["Profibus/Profinet", "Modbus TCP", "OPC UA", "AS-i Bus", "IPv4/IPv6", "Routing & Switching"],
       color: "from-emerald-500 to-teal-500",
     },
     {
@@ -37,7 +37,7 @@ const Skills = () => {
       icon: Wrench,
       title: t("skills.processEngineering"),
       description: t("skills.processEngineeringDesc"),
-      skills: ["HMI & SCADA Development", "DCS Systems", "PID Control", "Field Instrumentation", "Motor & Valve Sizing"],
+      skills: ["HMI & SCADA Development", "DCS Systems", "PID Control", "Field Instrumentation", "Motor & Valve Sizing", "AVEVA InTouch"],
       color: "from-rose-500 to-pink-500",
     },
     {
@@ -51,23 +51,18 @@ const Skills = () => {
       icon: Cpu,
       title: t("skills.robotics"),
       description: t("skills.roboticsDesc"),
-      skills: ["Visual Components", "HAZOP Analysis", "Risk Assessment"],
+      skills: ["Visual Components", "Machine Vision", "HAZOP Analysis", "Risk Assessment"],
       color: "from-sky-500 to-cyan-500",
     },
   ];
 
   const currentlyLearning = [
-    t("skills.learning.opcua"),
-    t("skills.learning.machineVision"),
     t("skills.learning.industrialRobotics"),
     t("skills.learning.projectEconomics"),
-    t("skills.learning.stl"),
-    t("skills.learning.twincat"),
     t("skills.learning.python"),
     t("skills.learning.valmetDna"),
     t("skills.learning.pidTuning"),
     t("skills.learning.mpc"),
-    t("skills.learning.avevaIntouch"),
   ];
 
   return (
