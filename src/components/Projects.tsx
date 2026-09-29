@@ -6,6 +6,18 @@ const Projects = () => {
 
   const academicProjects = [
     {
+      icon: Network,
+      title: t("projects.remoteData.title"),
+      description: t("projects.remoteData.description"),
+      tech: ["Beckhoff TwinCAT", "MQTT", "Valmet DNA", "PROFINET", "Modbus RTU"],
+    },
+    {
+      icon: Gauge,
+      title: t("projects.avevaHmi.title"),
+      description: t("projects.avevaHmi.description"),
+      tech: ["AVEVA InTouch", "Siemens PLC", "OPC UA", "HMI", "AI"],
+    },
+    {
       icon: Cpu,
       title: t("projects.pumpingModule.title"),
       description: t("projects.pumpingModule.description"),

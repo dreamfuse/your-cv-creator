@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import resumeAsset from "@/assets/Ogbonnah_Chinemerem_Automation_Resume.pdf.asset.json";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,7 +66,7 @@ const Navigation = () => {
             </button>
             
             <Button size="sm" asChild>
-              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>
+              <a href={resumeAsset.url} download="Ogbonnah_Chinemerem_Automation_Resume.pdf">
                 {t("nav.downloadCv")}
               </a>
             </Button>
@@ -108,7 +109,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button size="sm" className="w-full" asChild>
-              <a href="/Ogbonnah_Chinemerem_CV.pdf" download>
+              <a href={resumeAsset.url} download="Ogbonnah_Chinemerem_Automation_Resume.pdf">
                 {t("nav.downloadCv")}
               </a>
             </Button>
