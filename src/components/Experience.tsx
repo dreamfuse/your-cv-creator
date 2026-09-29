@@ -8,7 +8,7 @@ const Experience = () => {
     {
       title: t("experience.talentBoost.title"),
       company: t("experience.talentBoost.company"),
-      period: "Aug 2025 - Dec 2025",
+      period: "Aug 2025 - Jun 2026",
       description: t("experience.talentBoost.description"),
       highlights: ["Professional Development", "Industry Exposure", "Technical Training"],
     },
