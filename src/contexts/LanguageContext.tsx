@@ -289,7 +289,7 @@ const translations = {
     // Experience items
     "experience.talentBoost.title": "Talent Boost -harjoittelija",
     "experience.talentBoost.company": "Jyväskylän ammattikorkeakoulu",
-    "experience.talentBoost.description": "Harjoitteluohjelma keskittyen ammatilliseen kehitykseen ja teollisuuteen tutustumiseen automaation ja robotiikan alalla.",
+    "experience.talentBoost.description": "Tapahtumakoordinointitehtävä, jonka tavoitteena oli opiskelijoiden integrointi suomalaiseen työelämään. Työhön kuului sidosryhmäviestintää ja yhteistyötä yritysten ja organisaatioiden kanssa.",
     "experience.marketing.title": "Markkinointiharjoittelija",
     "experience.marketing.company": "UMT Victor",
     "experience.marketing.description": "Osallistuin markkinointi-aloitteisiin ja sain kokemusta liiketoiminnasta.",
