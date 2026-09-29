@@ -1,3 +1,4 @@
+import type React from "react";
 import { createContext, useContext, useState, ReactNode } from "react";
 
 type Language = "en" | "fi";
@@ -337,7 +338,8 @@ const translations = {
   },
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const g = globalThis as unknown as { __languageContext?: React.Context<LanguageContextType | undefined> };
+const LanguageContext = g.__languageContext ?? (g.__languageContext = createContext<LanguageContextType | undefined>(undefined));
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>("en");
@@ -356,7 +358,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
+    return {
+      language: "en" as Language,
+      setLanguage: () => {},
+      t: (key: string) => translations.en[key as keyof typeof translations.en] || key,
+    };
   }
   return context;
 };
