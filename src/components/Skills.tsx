@@ -1,4 +1,4 @@
-import { Cpu, Wrench, Code, Network, Zap, BookOpen } from "lucide-react";
+import { Cpu, Wrench, Code, Network, Zap, BookOpen, ScanEye, Gauge } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Skills = () => {
@@ -7,51 +7,51 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: Cpu,
-      title: t("skills.plcAutomation"),
-      description: t("skills.plcAutomationDesc"),
-      skills: ["Siemens TIA Portal", "Beckhoff TwinCAT", "Valmet DNA", "PLC Programming", "Ladder Logic", "FBD", "SFC", "STL Programming", "Sequence Control"],
+      title: t("skills.automationControl"),
+      description: t("skills.automationControlDesc"),
+      skills: ["PLC Programming (Ladder Logic, FBD)", "Siemens TIA Portal", "Beckhoff TwinCAT", "Valmet DNA (DCS Systems)", "PID Control", "Sequence Control", "HMI / SCADA Development", "OPC UA", "AVEVA InTouch", "Siemens WinCC"],
       color: "from-cyan-500 to-blue-500",
     },
     {
       icon: Wrench,
       title: t("skills.engineeringTools"),
       description: t("skills.engineeringToolsDesc"),
-      skills: ["AutoCAD", "LabVIEW", "MATLAB", "Git", "ABB DriveSize", "Valmet NelProf"],
+      skills: ["AutoCAD", "LabVIEW", "Git", "Visual Components"],
       color: "from-violet-500 to-purple-500",
+    },
+    {
+      icon: Code,
+      title: t("skills.programming"),
+      description: t("skills.programmingDesc"),
+      skills: ["C#", "Python", "MATLAB"],
+      color: "from-orange-500 to-amber-500",
+    },
+    {
+      icon: Gauge,
+      title: t("skills.industrialSystems"),
+      description: t("skills.industrialSystemsDesc"),
+      skills: ["Sensors & Transmitters", "Control Valves", "Pumps & Actuators", "I/O Module Configuration", "Signal Scaling & Data Conversion", "Field Instrument Design", "Testing, Commissioning & Diagnostics"],
+      color: "from-rose-500 to-pink-500",
+    },
+    {
+      icon: ScanEye,
+      title: t("skills.machineVision"),
+      description: t("skills.machineVisionDesc"),
+      skills: ["Optical Character Recognition (OCR)", "Object Sizing & Dimensional Measurement", "Image Processing & Analysis", "Vision-Based Inspection Systems"],
+      color: "from-fuchsia-500 to-purple-500",
     },
     {
       icon: Network,
       title: t("skills.communicationProtocols"),
       description: t("skills.communicationProtocolsDesc"),
-      skills: ["PROFINET", "PROFIBUS", "OPC UA", "MQTT", "Modbus TCP", "Modbus RTU", "EtherCAT", "AS-i Bus", "Network Configuration"],
+      skills: ["PROFINET", "PROFIBUS", "Modbus TCP", "AS-i Bus", "EtherCAT", "Network Configuration"],
       color: "from-emerald-500 to-teal-500",
-    },
-    {
-      icon: Code,
-      title: t("skills.programmingIt"),
-      description: t("skills.programmingItDesc"),
-      skills: ["Python", "C# Programming", "MATLAB", "Git", "JSON Data Handling", "Microsoft Office 365"],
-      color: "from-orange-500 to-amber-500",
-    },
-    {
-      icon: Wrench,
-      title: t("skills.processEngineering"),
-      description: t("skills.processEngineeringDesc"),
-      skills: ["HMI & SCADA Development", "AVEVA InTouch", "Siemens WinCC", "DCS Systems", "PID Control", "Sensors & Transmitters", "Control Valves", "Pumps & Actuators", "I/O Configuration", "Signal Scaling", "Field Instrument Design", "Testing & Commissioning"],
-      color: "from-rose-500 to-pink-500",
-    },
-    {
-      icon: BookOpen,
-      title: t("skills.safetyStandards"),
-      description: t("skills.safetyStandardsDesc"),
-      skills: ["HAZOP Analysis", "Risk Analysis", "Safety Design", "Engineering Documentation", "I/O Lists", "Wiring & Circuit Diagrams"],
-      color: "from-indigo-500 to-blue-500",
     },
     {
       icon: Cpu,
       title: t("skills.robotics"),
       description: t("skills.roboticsDesc"),
-      skills: ["ABB RobotStudio", "Visual Components", "MiR Programming", "UR Cobots", "Robot Simulation", "Cell Design", "Machine Vision", "OCR", "Object Measurement", "Image Processing", "Vision-Based Inspection"],
+      skills: ["ABB RobotStudio", "Visual Components", "MiR Programming", "HAZOP Analysis & Risk Assessment", "Robot Simulation & Cell Design", "UR Cobots"],
       color: "from-sky-500 to-cyan-500",
     },
   ];
