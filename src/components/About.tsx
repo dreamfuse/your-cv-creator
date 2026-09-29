@@ -31,7 +31,7 @@ const About = () => {
                 <p className="text-lg text-foreground leading-relaxed">
                   {t("about.description1")}{" "}
                   <span className="text-primary font-medium">TIA Portal</span> {t("about.description2")}{" "}
-                  <span className="text-primary font-medium">Beckhoff TwinCAT</span>{" "}
+                  <span className="text-primary font-medium">Beckhoff TwinCAT,&nbsp;Valmet DNA,&nbsp;Machine Vision </span>
                   {t("about.description3")}
                 </p>
               </div>
