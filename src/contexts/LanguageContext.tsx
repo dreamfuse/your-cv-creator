@@ -101,6 +101,10 @@ const translations = {
     "projects.fieldDevice.description": "Prepared device lists for a process, including field device planning and documentation, I/O lists, wiring diagrams, and circuit diagrams.",
     "projects.valmetDna.title": "Valmet DNA",
     "projects.valmetDna.description": "Used Valmet DNA to create loops diagrams to pump water between tanks. The system incorporated PID tuning, cascade and ratio control structures, safety interlocks, GSD file interpretation, ACN I/O module configuration, and analog/digital signal scaling and data conversion.",
+    "projects.remoteData.title": "Remote Process Data Acquisition and Control",
+    "projects.remoteData.description": "Configured a Beckhoff PLC running TwinCAT as a PROFINET device to exchange process measurements and remote setpoints with Valmet DNA. Transmitted data to a remote database through MQTT, encoded measurements as JSON, and received device data through Modbus RTU.",
+    "projects.avevaHmi.title": "Process Control using AVEVA InTouch HMI",
+    "projects.avevaHmi.description": "Created an HMI application for a Siemens-controlled water process module, using OPC UA for communication. Built reusable faceplates and user-defined types, and used AI to automate the conversion of TIA Portal tags into an AVEVA-compatible format.",
     
     // Visual Components Projects
     "projects.warehouse.title": "Warehouse Simulation using Visual Components",
@@ -131,6 +135,9 @@ const translations = {
     "experience.highSchool": "High School Diploma",
     
     // Experience items
+    "experience.automationIntern.title": "Automation Engineer Intern",
+    "experience.automationIntern.company": "JAMK University of Applied Sciences",
+    "experience.automationIntern.description": "Internship focusing on industrial data acquisition and storage, connecting a Valmet DNA system to a remote database using MQTT and Beckhoff TwinCAT over PROFINET.",
     "experience.talentBoost.title": "Talent Boost Intern",
     "experience.talentBoost.company": "JAMK University of Applied Sciences",
     "experience.talentBoost.description": " Event coordination role focused on student integration into the Finnish working environment, involving stakeholder communication and collaboration with companies and organizations.",
@@ -257,6 +264,10 @@ const translations = {
     "projects.fieldDevice.description": "Valmistelin laiteluettelot prosessille, mukaan lukien kenttälaitteen suunnittelu ja dokumentointi, I/O-listat, johdotuskaaviot ja piirikaaviot.",
     "projects.valmetDna.title": "Valmet DNA",
     "projects.valmetDna.description": "Käytin Valmet DNA:ta luodakseni silmukkakaavioita veden pumppaamiseen säiliöiden välillä. Järjestelmä sisälsi PID-virityksen, kaskadi- ja suhdesäätörakenteet, turvalukkitukset, GSD-tiedoston tulkinnan, ACN I/O-moduulin konfiguroinnin sekä analogisen/digitaalisen signaalin skaalauksen ja datan muuntamisen.",
+    "projects.remoteData.title": "Prosessidatan etähankinta ja -ohjaus",
+    "projects.remoteData.description": "Konfiguroin TwinCATia käyttävän Beckhoff PLC:n PROFINET-laitteeksi prosessimittausten ja etäasetusarvojen siirtämiseksi Valmet DNA:n kanssa. Siirsin dataa etätietokantaan MQTT:n kautta, koodasin mittaukset JSON-muotoon ja vastaanotin laitemittauksia Modbus RTU:lla.",
+    "projects.avevaHmi.title": "Prosessinohjaus AVEVA InTouch HMI:llä",
+    "projects.avevaHmi.description": "Loin HMI-sovelluksen Siemensin ohjaamalle vesiprosessimoduulille ja käytin OPC UA:ta tiedonsiirtoon. Rakensin uudelleenkäytettäviä faceplate-näkymiä ja käyttäjän määrittämiä tietotyyppejä sekä hyödynsin tekoälyä TIA Portal -tagien automaattisessa muuntamisessa AVEVA-yhteensopivaan muotoon.",
     
     // Visual Components Projects
     "projects.warehouse.title": "Varastosimulointia Visual Componentsilla",
@@ -287,6 +298,9 @@ const translations = {
     "experience.highSchool": "Lukion päättötodistus",
     
     // Experience items
+    "experience.automationIntern.title": "Automaatioinsinööriharjoittelija",
+    "experience.automationIntern.company": "Jyväskylän ammattikorkeakoulu",
+    "experience.automationIntern.description": "Harjoittelu keskittyy teollisen datan keruuseen ja tallennukseen yhdistämällä Valmet DNA -järjestelmä etätietokantaan MQTT:n sekä PROFINETin kautta toimivan Beckhoff TwinCATin avulla.",
     "experience.talentBoost.title": "Talent Boost -harjoittelija",
     "experience.talentBoost.company": "Jyväskylän ammattikorkeakoulu",
     "experience.talentBoost.description": "Tapahtumakoordinointitehtävä, jonka tavoitteena oli opiskelijoiden integrointi suomalaiseen työelämään. Työhön kuului sidosryhmäviestintää ja yhteistyötä yritysten ja organisaatioiden kanssa.",

@@ -6,6 +6,13 @@ const Experience = () => {
 
   const experiences = [
     {
+      title: t("experience.automationIntern.title"),
+      company: t("experience.automationIntern.company"),
+      period: "Aug 2026",
+      description: t("experience.automationIntern.description"),
+      highlights: ["Valmet DNA", "MQTT", "Beckhoff TwinCAT", "PROFINET"],
+    },
+    {
       title: t("experience.talentBoost.title"),
       company: t("experience.talentBoost.company"),
       period: "Aug 2025 - Jun 2026",
