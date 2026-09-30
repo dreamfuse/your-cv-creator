@@ -16,7 +16,7 @@ const Skills = () => {
       icon: Gauge,
       title: t("skills.controlScada"),
       description: t("skills.controlScadaDesc"),
-      skills: ["PID Control", "Sequence Control", "HMI / SCADA Development (Beckhoff, Siemens)", "AVEVA InTouch", "Siemens WinCC"],
+      skills: ["PID Control", "Sequence Control", "Siemens HMI", "AVEVA InTouch", "Siemens WinCC"],
       color: "from-violet-500 to-purple-500",
     },
     {
