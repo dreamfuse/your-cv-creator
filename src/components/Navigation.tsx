@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import resumeAsset from "@/assets/Ogbonnah_Chinemerem_Automation_Resume.pdf.asset.json";
+import resumeAsset from "@/assets/Chinemerem_Ogbonnah_Automation_CV.pdf.asset.json";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
