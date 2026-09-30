@@ -32,7 +32,7 @@ const translations = {
     "about.description1": "Final-year Automation student proficient in",
     "about.description2": ",",
     "about.description3": " and Industrial Robotics.",
-    "about.description4": "Strong problem solver and team player, with experience working on mini-projects involving multiple communication protocols. Passionate about taking innovative and creative approaches to solve technical challenges.",
+    "about.description4": "Strong problem solver and team player, with experience working on mini-projects involving multiple communication protocols. Passionate about taking innovative and creative approaches to solve technical challenges. I have a valid drivers license and am open to travel if needed.",
     "about.languages": "Languages",
     "about.englishFluent": "English — Fluent",
     "about.finnishBasic": "Finnish — Intermediate",
