@@ -30,7 +30,7 @@ const Skills = () => {
       icon: Wrench,
       title: t("skills.instrumentation"),
       description: t("skills.instrumentationDesc"),
-      skills: ["Sensors & Transmitters", "Control Valves & Actuators", "I/O Configuration", "Commissioning & Diagnostics"],
+      skills: ["Field Instruments", "Sensors & Transmitters", "Control Valves & Actuators", "I/O Configuration", "Testing, Commissioning and Diagnostics"],
       color: "from-rose-500 to-pink-500",
     },
     {
